@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">	
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_alignParentTop="true" >
+	    
+        <LinearLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+			
+			<TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="0.9"
+			    android:text=""
+			    android:textAppearance="?android:attr/textAppearanceMedium" />  
+			
+			<TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+			    android:text="@string/attacker"
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />  
+			
+			<TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+			    android:text="@string/defender"
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />             
+   		</LinearLayout>
+	    
+        <LinearLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+			
+			<TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="0.9"
+			    android:text="@string/tanks"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />       
+
+		    <EditText
+		        android:id="@+id/edtAtkT"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:inputType="number"
+		        android:text="@string/one" 
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />      
+
+		    <EditText
+		        android:id="@+id/edtDefT"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:inputType="number"
+		        android:text="@string/one" 
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />               
+   		</LinearLayout>
+	    
+        <LinearLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+			
+			<TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="0.9"
+			    android:text="@string/airplanes"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />        
+
+		    <EditText
+		        android:id="@+id/edtAtkA"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:inputType="number"
+		        android:text="@string/one" 
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />  
+			     
+		    <EditText
+		        android:id="@+id/edtDefA"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:inputType="number"
+		        android:text="@string/one" 
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />                    
+   		</LinearLayout>
+	    
+        <LinearLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal" >
+			
+			<TextView
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="0.9"
+			    android:text="@string/submarines"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />     
+		
+			<EditText
+		        android:id="@+id/edtAtkS"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:inputType="number"
+		        android:text="@string/one" 
+			    android:gravity="center"
+			    android:textAppearance="?android:attr/textAppearanceMedium" />          
+
+		    <EditText
+		        android:id="@+id/edtDefS"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:gravity="center"
+		        android:inputType="number"
+		        android:text="@string/one"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:visibility="invisible" />
+         
+   		</LinearLayout>
+   		
+    </LinearLayout>    
+
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        android:layout_alignParentBottom="true" >
+
+	    <Button
+	        android:id="@+id/btnFast"
+	        android:layout_width="match_parent"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"	
+			android:textAppearance="?android:attr/textAppearanceMedium"        
+	        android:onClick="showFightResult"
+	        android:text="@string/fast_result" />
+	
+	    <Button
+	        android:id="@+id/btnStepByStep"
+	        android:layout_width="match_parent"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:onClick="fightStepByStep"
+	        android:text="@string/step_by_step" />
+	
+	    <Button
+	        android:id="@+id/btnSim"
+	        android:layout_width="match_parent"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:onClick="showSimulationResult"
+	        android:text="@string/run_sim" />
+	        
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+			    
+		    <Button
+		        android:id="@+id/btnShare"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:onClick="share"
+		        android:text="@string/share" />
+			
+		    <Button
+		        android:id="@+id/btnMore"
+		        android:layout_width="match_parent"
+		        android:layout_weight="1"
+		        android:layout_height="wrap_content"
+				android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:onClick="showMyApps"
+		        android:text="@string/more_apps" />
+		</LinearLayout>
+	</LinearLayout>
+  
+</RelativeLayout>
